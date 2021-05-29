@@ -26,7 +26,7 @@ SECRET_KEY = 'gb97yq8gg00u*2*7_(ez$g%qj-5qr_j!p%p7xl@xk$ztamcy@9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['alphaspeettest.herokuapp.com','localhost']
 
 # Application definition
 
