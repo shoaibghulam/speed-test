@@ -1,0 +1,55 @@
+{% extends "master.html" %}
+{% block master %}
+{% load static %}
+<!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'photos/headbg/headbgactive.jpg' %}">
+      <div class="container pt-70 pb-20">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="title text-white">Journals</h2>
+              <ol class="breadcrumb text-left text-black mt-10">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li class="active text-gray-silver">University Journals</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <!-- Textblock -->
+        <div class="esc-heading heading-line-bottom lr-line left-heading">
+          <h4>Journals
+        </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="gallery-isotope grid-2 masonry gutter-small clearfix" data-lightbox="gallery">
+                <!-- Portfolio Item Start -->
+                <div class="gallery-item">
+                  <a href="http://www.jdsor.com/" data-lightbox="gallery-item" title="Title Here 1"><img  style="padding: 30px;" src="{% static 'photos/Pages/dental-journal-front.jpg' %}" alt=""></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://ijaims.net/" data-lightbox="gallery-item" title="Title Here 1"><img  style="padding: 30px;" src="{% static 'photos/Pages/medical-journal.jpg' %}" alt=""></a>
+                  </div>
+                <!-- Portfolio Item End -->
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+
+  {% endblock %}

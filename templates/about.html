@@ -1,0 +1,145 @@
+{% extends "master.html" %}
+{% block master %}
+{% load static %}
+<!-- Start main-content -->
+<div class="main-content">
+
+  <!-- Section: inner-header -->
+  <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'photos/headbg/headbgactive.jpg' %}">
+    <div class="container pt-70 pb-20">
+      <!-- Section Content -->
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="title text-white">About</h2>
+            <ol class="breadcrumb text-left text-black mt-10">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pages</a></li>
+              <li class="active text-gray-silver">About</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: About -->
+  <section class="">
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-10">
+            <h6 class="letter-space-4 text-gray-darkgray text-uppercase mt-0 mb-0">About Chancellor</h6>
+            <h2 class="text-uppercase font-weight-600 mt-0 font-28 line-bottom">Dr. Keshav Kumar Agarwal</h2>
+            <h4 class="text-theme-colored"><a style="color: red;" href="https://www.biu.edu.in/wp-content/uploads/2018/07/BIO.pdf">About
+                More Click Here-:Profile of Dr.Keshav Kumar Agrawal</a></h4>
+            <p>Dr. Keshav Kumar , renowned Surgeon and award winner for professional excellence is an MBBS, MS, MRSH,
+              FISS and Managing Director of a multi-crore hospital known as Keshlata Hospital, which was promoted by him
+              & his wife Dr. Lata Agarwal, MBBS, MS (Obst. & Gynae) in the year 1990.</p>
+            <p> The hospital has a wide range of facilities viz Cobalt-60 Machine, CT Scan, MRI, Lithotripter, C Arm
+              image intensifier, Cardiac Cathlab etc. The Hospital has all the departments viz Cancer treatment &
+              surgery, general & open surgery, Urology, Neurology, Neurosurgery, Orthopedics, Dentalogy, Cardiology,
+              Open Heart Surgery, Gynecology, Radiology, Radiotherapy, General Medicine, ENT & Opthalmics etc. The
+              Hospital contains 125 bedded facilities managed by 14 senior consultant doctors. The hospital is situated
+              at delapeer, stadium road, Bareilly just three 3 kms from the institute & is fully affiliated with this
+              institute. Keshlata school of nursing and Keshlata Institute of Paramedical Sciences are also situated in
+              the campus of Keshlata Hospital</p>
+            <a class="btn btn-theme-colored btn-flat btn-lg mt-10 mb-sm-30" href="https://www.biu.edu.in/wp-content/uploads/2018/07/BIO.pdf">Know More →</a>
+          </div>
+          <div class="col-md-2">
+            <div class="video-popup">
+              <a href="" data-lightbox-gallery="youtube-video" title="Video">
+                <img alt="" src="{% static 'photos/about/drkeshavsmall.jpg' %}"
+                  class="img-responsive img-fullwidth">
+                <p style="text-align: center;"><strong>University Chancellor</strong></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Textblock -->
+      <div class="esc-heading heading-line-bottom lr-line left-heading">
+        <h4>About The University</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Bareilly International University, Bareilly is established in accordance to UGC Act 1956 by the Uttar
+            Pradesh Govt. Act No. 26 of 2016 dated 16th Sept 2016. The University is promoted by Rohilkhand Charitable
+            Educational Trust and is functional from session 2016-17 with various courses. </p>
+          <p><strong>Objectives:</strong></p>
+          <p>Our endeavor is to impart knowledge and develop skill to attain success by its pupil in professional and
+            personal life by providing growing learning and research environment with due support of world class
+            faculties, infrastructure, facilities and technology.
+          </p>
+          <p><strong>Goal:</strong></p>
+          <p>To contribute to society through the pursuit of education, research and health care services with
+            excellence.
+
+            To create an environment to preserve, discover, and disseminate knowledge and promote application of
+            knowledge for betterment of society.
+
+            To focus on student achievement and success, community service, and organizational excellence by means of
+            high quality faculty, infrastructure, facilities and environment.
+
+            To encourage participation for the development of the society and community and dealing with its
+            predicaments through various courses, programs, trainings, workshops, seminars, symposiums, conferences.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Divider: Call To Action -->
+  <section class="bg-theme-color-2">
+    <div class="container pt-10 pb-20">
+      <div class="row">
+        <div class="call-to-action">
+          <div class="col-md-6">
+            <h3 class="mt-5 mb-5 text-white vertical-align-middle"><i
+                class="pe-7s-mail mr-10 font-48 vertical-align-middle"></i> SUBSCRIBE TO OUR NEWSLETTER</h3>
+          </div>
+          <div class="col-md-6">
+            <!-- Mailchimp Subscription Form Starts Here -->
+            <form id="mailchimp-subscription-form" class="newsletter-form mt-10">
+              <div class="input-group">
+                <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16"
+                  data-height="45px" id="mce-EMAIL-footer">
+                <span class="input-group-btn">
+                  <button data-height="45px" class="btn bg-theme-colored text-white btn-xs m-0 font-14"
+                    type="submit">Subscribe</button>
+                </span>
+              </div>
+            </form>
+            <!-- Mailchimp Subscription Form Validation-->
+            <script type="text/javascript">
+              $('#mailchimp-subscription-form').ajaxChimp({
+                callback: mailChimpCallBack,
+                url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+              });
+
+              function mailChimpCallBack(resp) {
+                // Hide any previous response text
+                var $mailchimpform = $('#mailchimp-subscription-form'),
+                  $response = '';
+                $mailchimpform.children(".alert").remove();
+                if (resp.result === 'success') {
+                  $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                } else if (resp.result === 'error') {
+                  $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                }
+                $mailchimpform.prepend($response);
+              }
+            </script>
+            <!-- Mailchimp Subscription Form Ends Here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- end main-content -->
+
+{% endblock %}

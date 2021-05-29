@@ -1,0 +1,1954 @@
+{% extends "master.html" %}
+{% block master %}
+    {% load static %}
+    <!-- Start main-content -->
+    <div class="main-content">
+        <section class="font-15 font-weight-400"
+                 style="background-color:#eaeaea8f;height: 26px;padding: 0px 0px 0px 0px;">
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+      <span><a href="http://www.biu.edu.in/wp-content/uploads/2019/12/Ph.D.-Thesis-Format.pdf">Ph.D. - Thesis-Format
+          ||</a></span>
+                <span><a href="http://www.biu.edu.in/wp-content/uploads/2019/12/Ph.D.-Protocol-Format.pdf">Ph.D. - Protocol-Format
+          ||</a></span>
+                <span><a
+                        href="http://rmcbareilly.com/wp-content/uploads/2018/10/Thesis-Protocol-RMCH-Sept-2018-Final-New.pdf">Format
+          For Thesis Protocol Submissions - MD/MS/MDS ||</a></span>
+            </marquee>
+        </section>
+        <!-- Section: home -->
+        <section id="home" class="divider no--bg layer-overlay overlay-dark-light"
+                 data-bg-img="{% static 'photos/home/homevediogate.jpg' %}">
+            <div class="bg-video">
+                <div id="home-video" class="video">
+                    <div class="player video-container"
+                         data-property="{videoURL:'UqoeQMSc500',containment:'#home-video',autoPlay:true, showControls:false, mute:false, startAt:0, opacity:1}">
+                    </div>
+                </div>
+            </div>
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container pt-200 pb-190">
+                        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 style="margin-top: 240px;" class="text-white text-uppercase font-60 font-weight-700 mb-0"> <span
+                  style="color: #F2184F;">
+                  Bareilly </span> <span style="color: #F2184F;"> International </span> <span style="color: #F2184F;"
+                  class="text-theme-color-2">University</h2>
+               <a href="#" class="">
+                <img src="{% static 'photos/home/logo-small.png' %}" width="200" alt="" loading="lazy">
+              </a>
+              <p class="font-16 text-white">Bareilly International University invites application for admission
+                Undergraduate <br>Postgraduate, Phd. of Medical Education & Others Programmes.</p>
+               <a  class="btn btn-colored btn-theme-colored btn-flat mt-15" href="#">Register Now</a>
+            </div>
+          </div>-->
+                    </div>
+                    <p class="text-white text-uppercase font-20 font-weight-700 mb-0 mt-150 text-right"> <span
+                            style="color: #F2184F;">
+          Bareilly International University</span></p>
+                </div>
+            </div>
+        </section>
+        <!-- Divider: Call To Action -->
+        <section class="bg-theme-colored">
+            <div class="container pt-10 pb-20">
+                <div class="row">
+                    <div class="call-to-action">
+                        <!-- Reservation Search Code Form Start-->
+                        <p id="get_course" hidden></p>
+                        <div class="col-md-12">
+                            <h3 class="text-white mt-0 mb-10">Find <span
+                                    class="text-theme-color-2"> Course Details</span> !</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="form-group mb-15">
+                                <div class="styled-select">
+                                    <select id="stream" name="stream" class="form-control" required="">
+                                        <option value="" selected="selected">- Select Stream -</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="form-group mb-15">
+                                <div class="styled-select">
+                                    <select id="graduate" name="graduate" class="form-control" required="">
+                                        <option value="" selected="selected">- Select Graduate -</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-2">
+                            <div class="form-group mb-15">
+                                <div class="styled-select">
+                                    <select id="course" name="course" class="form-control" required="">
+                                        <option value="" selected="selected">- Select Course -</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-2">
+                            <div class="form-group mb-15 mt-0">
+                                <button type="submit"
+                                        class="btn btn-default btn-lg btn-flat border-left-theme-color-2-4px form-control"
+                                        data-loading-text="Please wait..." onclick="findFunction()">Get Details
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Reservation Form End-->
+                        <!-- Reservation Form Validation Start
+                        < type="text/javascript">
+                          $("#reservation_form").validate({
+                            submitHandler: function (form) {
+                              var form_btn = $(form).find('button[type="submit"]');
+                              var form_result_div = '#form-result';
+                              $(form_result_div).remove();
+                              form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                              var form_btn_old_msg = form_btn.html();
+                              form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                              $(form).ajaxSubmit({
+                                dataType: 'json',
+                                success: function (data) {
+                                  if (data.status == 'true') {
+                                    $(form).find('.form-control').val('');
+                                  }
+                                  form_btn.prop('disabled', false).html(form_btn_old_msg);
+                                  $(form_result_div).html(data.message).fadeIn('slow');
+                                  setTimeout(function () { $(form_result_div).fadeOut('slow') }, 6000);
+                                }
+                              });
+                            }
+                          });
+                        </>-->
+                        <!-- Reservation Form Validation Start -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <a href="#" class="">
+                                    <img src="{% static 'photos/home/fee.gif' %}" width="90" alt="" loading="lazy">
+                                </a>
+                                <h4 class="icon-box-title text-uppercase"><a class="" href="#">Fee Structure</a></h4>
+                                <p class="">Get courses fee structure details for this Session</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <a href="#" class="">
+                                    <img src="{% static 'photos/home/Payment.gif' %}" width="90" alt="" loading="lazy">
+                                </a>
+                                <h4 class="icon-box-title text-uppercase"><a class=""
+                                                                             href="https://page.biu.edu.in/online-payment/">Online
+                                    payment</a></h4>
+                                <p class="">Pay your, fees, and other Charges Online</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <a href="#" class="">
+                                    <img src="{% static 'photos/home/course.gif' %}" width="90" alt="" loading="lazy">
+                                </a>
+                                <h4 class="icon-box-title text-uppercase"><a class="" href="#">Our Course</a></h4>
+                                <p class="">We are offering Medical, Dental, Nursing and Other Courses</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <a href="#" class="">
+                                    <img src="{% static 'photos/home/Admisiion.gif' %}" width="90" alt=""
+                                         loading="lazy">
+                                </a>
+                                <h4 class="icon-box-title text-uppercase"><a class=""
+                                                                             href="https://page.biu.edu.in/registration-form/">Online
+                                    Registration</a></h4>
+                                <p class="">Admission Open for the Current Session 2021-2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: About -->
+        <section class="bg-theme-homesection">
+            <div class="container">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="letter-space-4 text-gray-darkgray text-uppercase mt-0 mb-0">All About</h6>
+                            <h2 style="color: #ef4c68;" class="text-uppercase font-weight-600 mt-0 font-28 line-bottom">
+                                Welcome to
+                                Bareilly International University</h2>
+                            <h4 class="text-theme-colored">Overview & Identity</h4>
+                            <p>Bareilly International University, Bareilly is established in accordance to UGC Act 1956
+                                by the Uttar
+                                Pradesh Govt. Act No. 26 of 2016 dated 16th Sept 2016. The University is promoted by
+                                Rohilkhand Charitable
+                                Educational Trust and is functional from session 2016-17 with various courses.Our
+                                endeavor is to impart
+                                knowledge and develop skill to attain success by its pupil in professional and personal
+                                life by providing
+                                growing learning and research environment with due support of world class faculties,
+                                infrastructure,
+                                facilities and technology.</p>
+                            <a class="btn btn-theme-colored btn-flat btn-lg mt-10 mb-sm-30" href="history">Know More
+                                →</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="video-popup">
+                                <a href="https://www.youtube.com/watch?v=pW1uVUg5wXM"
+                                   data-lightbox-gallery="youtube-video" title="Video">
+                                    <img alt="" src="{% static 'photos/home/biuvedio.jpg' %}"
+                                         class="img-responsive img-fullwidth"
+                                         loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: About  -->
+        <section>
+            <div class="container">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="owl-carousel-1col" data-nav="true">
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/AADEV_9619.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/con2_31.JPG' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/DSC_8861-min.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/AA7E8A2336S.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/AADSC_5182-1.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/AADSC_5417.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/AAIMG_8935.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/IMG_3816.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/IMG_5013.jpg' %}" alt="" loading="lazy">
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'photos/home/event/IMG_20200308_232405.jpg' %}" alt=""
+                                         loading="lazy">
+                                </div>
+                            </div>
+                            <h3 class="text-theme-colored"><a href="events" style="color:#ef4c68;">University Events</a>
+                            </h3>
+                            <p>Students can easily find information related to the hot and happening Events at Bareilly
+                                International
+                                University , Bareilly. The events are listed with photographs, videos and
+                                information.</p>
+                            <a class="text-theme-colored font-13" href="events">Read More →</a>
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="line-bottom mt-0 line-height-1">Why <span
+                                    class="text-theme-color-2">Choose Us?</span></h2>
+                            <p class="mb-30">Bareilly International University Vision is to be a partner in building
+                                india a world
+                                leader in Medical Education & Health care, Professional.</p>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="icon-box p-0 mb-30">
+                                        <a class="icon icon-sm pull-left sm-pull-none flip mb-sm-15 mb-0 mr-10"
+                                           href="journals">
+                                            <i style="color: #333333;" class="fa fa-book text-red font-36"></i>
+                                        </a>
+                                        <h4 class="icon-box-title m-0 mb-5"><a style="color:#ef4c68;" href="journals">Our
+                                            journals</a></h4>
+                                        <p class="text-gray mb-5">publishes the highest quality journals and delivers
+                                            this research to the
+                                            widest possible audience.</p>
+                                        <a href="journals" class="text-theme-colored font-13">Read More →</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="icon-box p-0 mb-30">
+                                        <a class="icon icon-sm pull-left sm-pull-none flip mb-sm-15 mb-0 mr-10"
+                                           href="groupinstitute">
+                                            <i style="color: #333333;" class="fa fa-university text-red font-36"></i>
+                                        </a>
+                                        <h4 class="icon-box-title m-0 mb-5"><a style="color:#ef4c68;"
+                                                                               href="#Coninstitute">Institutions</a>
+                                        </h4>
+                                        <p class="text-gray mb-5">Bareilly International University Constituent
+                                            Institutions are Rohilkhand
+                                            Medical College & Hospital..</p>
+                                        <a href="#groupinstitute" class="text-theme-colored font-13">Read More →</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="icon-box p-0 mb-sm-30">
+                                        <a class="icon icon-sm pull-left sm-pull-none flip mb-sm-15 mb-0 mr-10"
+                                           href="facilities">
+                                            <i style="color: #333333;" class=" fa fa-building-o text-red font-36"></i>
+                                        </a>
+                                        <h4 class="icon-box-title m-0 mb-5"><a style="color:#ef4c68;" href="facilities">Our
+                                            Facilites</a></h4>
+                                        <p class="text-gray mb-5">Bareilly International University believes in
+                                            providing the best college
+                                            experience to the students.</p>
+                                        <a href="facilities" class="text-theme-colored font-13">Read More →</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="icon-box p-0">
+                                        <a class="icon icon-sm pull-left sm-pull-none flip mb-sm-15 mb-0 mr-10"
+                                           href="hospitals">
+                                            <i style="color: #333333;" class="fa fa-hospital-o text-red font-36"></i>
+                                        </a>
+                                        <h4 class="icon-box-title m-0 mb-5"><a style="color:#ef4c68;" href="hospitals">Our
+                                            Hospital</a></h4>
+                                        <p class="text-gray mb-5">institutions which combines the services of a hospital
+                                            with the education of
+                                            medical students</p>
+                                        <a href="hospitals" class="text-theme-colored font-13">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Divider: Call To Action -->
+        <section class="bg-theme-color-2">
+            <div class="container pt-0 pb-15">
+                <div class="row">
+                    <h4 class="text-white font-21 font-weight-400" style="text-align: center;">Admission Enquiry
+                        Numbers</h4>
+                    <hr>
+                    <!-- <div class="call-to-action pt-20 pb-15"> -->
+                    <div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
+                            <i class="fa fa-phone-square text-white font-36 pull-left flip mt-15 mr-20"></i>
+                            <h4 class="text-white font-16 font-weight-400">9557259598, 8534882585</h4>
+                            <h6 class="text-white">MBBS, MD, MS</h6>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 mb-sm-30">
+                            <i class="fa fa-mobile text-white font-36 pull-left flip mt-15 mr-20"></i>
+                            <h4 class="text-white font-16 font-weight-400">Contact Us: 7500420630</h4>
+                            <h6 class="text-white">BDS, MDS</h6>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <i class="fa fa-phone text-white font-36 pull-left flip mt-15 mr-20"></i>
+                            <h4 class="font-16 text-white font-weight-400">9105500101 ,202, 303, 404</h4>
+                            <h6 class="text-white">Direct Admission, Our Others Courses </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Why Choose Us -->
+        <section id="event" class="">
+            <div class="container pb-50">
+                <div class="section-content">
+                    <div class="row">
+                        <!--<div class="col-md-6">
+              <h3 class="text-uppercase line-bottom mt-0 line-height-1"><i class="fa fa-calendar mr-10"></i>Important <span class="text-theme-color-2">Updates & Events</span></h3>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/1.jpg' %}"></a>
+                <div class="post-right">
+                  <h4 class="mt-0 mb-5"><a href="#">Upcoming Event Title</a></h4>
+                  <ul class="list-inline font-12 mb-5">
+                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
+                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
+                  </ul>
+                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
+                  <a class="text-theme-colored font-13" href="#">Read More →</a>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/2.jpg' %}"></a>
+                <div class="post-right">
+                  <h4 class="mt-0 mb-5"><a href="#">Upcoming Event Title</a></h4>
+                  <ul class="list-inline font-12 mb-5">
+                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
+                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
+                  </ul>
+                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
+                  <a class="text-theme-colored font-13" href="#">Read More →</a>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/3.jpg' %}"></a>
+                <div class="post-right">
+                  <h4 class="mt-0 mb-5"><a href="#">Upcoming Event Title</a></h4>
+                  <ul class="list-inline font-12 mb-5">
+                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
+                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
+                  </ul>
+                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
+                  <a class="text-theme-colored font-13" href="#">Read More →</a>
+                </div>
+              </article>
+            </div>-->
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase line-bottom mt-0 line-height-1"><i
+                                    class="fa fa-calendar mr-10"></i>Important
+                                <span class="text-theme-color-2"> News & Notice</span>
+                            </h3>
+                            <div class="bxslider bx-nav-top">
+                                <div class="border-1px border-left-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/12/UG-FEE-2020-21-1.pdf">MBBS
+                                        Fee 2020-2021</a>
+                                    </h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/11/University-Examination-fee-MBBS-Batch-2020-21.pdf">M.B.B.S
+                                        University Examination FEE for the 2020-21 Batch</a></h4>
+                                </div>
+                                <div class="border-1px border-right-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a href="https://upneet.gov.in/">MBBS COUNSELLING 2020-21</a>
+                                    </h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/04/P.G.-University-Examination-FEE-for-the-2020-21-Batch.pdf">P.G.
+                                        University Examination FEE for the 2020-21 Batch</a></h4>
+                                </div>
+                                <div class="border-1px border-left-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/11/BDS-FEE-2020-21.pdf">BDS
+                                        Fee Structure
+                                        2020-21</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a href="https://upneet.gov.in/">BDS Counselling 2020</a></h4>
+                                </div>
+                                <div class="border-1px border-right-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="http://rmcbareilly.com/wp-content/uploads/2020/07/MDMS-FEE-2020-21-1.pdf">MD-MS
+                                        FEE
+                                        2020-2021</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/07/Check-List-MDMS-2020-21.pdf">MD-MS
+                                        Check
+                                        List 2020-2021</a></h4>
+                                </div>
+                                <div class="border-1px border-left-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/04/Bond-Condition-of-UP-Govt.-See-S.N.-12-Page-6.pdf">Bond
+                                        Condition of UP Govt. See S.N. 12, Page 6</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/04/Bond-Condition-of-Roilkhand-Medical-College.pdf">Bond
+                                        Condition of Roilkhand Medical College for 2020-21</a></h4>
+                                </div>
+                                <div class="border-1px border-right-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/04/Revised-MDS-fee-structure-2020-21.pdf">Revised
+                                        MDS Fee Structure 2020-21</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/09/MDS-2020-HOSTEL-FEE-OF-IDS-BAREILLY156_rotated.pdf">MDS
+                                        HOSTEL FEE BATCH 2020</a></h4>
+                                </div>
+                                <!-- Add More -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase line-bottom mt-0 line-height-1"><i
+                                    class="fa fa-calendar mr-10"></i>Academics
+                                <span class="text-theme-color-2"> Updates &
+                Events</span>
+                            </h3>
+                            <div class="bxslider bx-nav-top">
+                                <div class="border-1px border-right-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <!--<div class="testimonial pt-10">
+                  <div class="thumb pull-left mb-0 mr-0 pr-20">
+                    <img width="75" class="img-circle" alt="" src="{% static 'photos/home/updates/1.jpg' %}">
+                  </div>
+                  <div class="ml-100 ">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque
+                      minus possimus eligendi dolore ad.</p>
+                    <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO
+                          apple.inc</em></small></p>
+                  </div>
+                </div>-->
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/12/Phd.-Admission-Notice-Jan-2021.pdf">
+                                        Admission Notice For Ph.d. Programme</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/07/1.PhD-Admission-Application-From.pdf">
+                                        Download Application Form For Ph.d. Programme</a></h4>
+                                </div>
+                                <div class="border-1px border-left-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2020/07/Ph-D-Fee-structure-effective-from-Jan-2020.pdf">
+                                        Fee For Ph.d. Programme</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2019/03/Free-Edu-1-6.pdf">
+                                        Free Education to Martyr’s Children</a></h4>
+                                </div>
+                                <div class="border-1px border-right-theme-color-2-6px media sm-maxwidth400 p-15 mt-0 mb-15">
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2019/03/Fee-scheme-1.pdf">
+                                        Scheme For Martyr’s Children</a></h4><br>
+                                    <h4 class="mt-0 mb-5"><a
+                                            href="https://www.biu.edu.in/wp-content/uploads/2019/03/Application-Form.pdf">
+                                        Application Form For Martyr’s Children</a></h4>
+                                </div>
+                                <!-- Add More -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Divider: Funfact -->
+        <section class="divider parallax layer-overlay overlay-theme-colored-9" data-bg-img="#"
+                 data-parallax-ratio="0.7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                        <div class="funfact text-center">
+                            <i class="fa fa-graduation-cap mt-5 text-theme-color-2"></i>
+                            <h2 data-animation-duration="2000" data-value="2200"
+                                class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+                            <h5 class="text-white text-uppercase mb-0">+ Students</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                        <div class="funfact text-center">
+                            <i class="fa fa-file-text mt-5 text-theme-color-2"></i>
+                            <h2 data-animation-duration="2000" data-value="65"
+                                class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+                            <h5 class="text-white text-uppercase mb-0">+ Courses</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                        <div class="funfact text-center">
+                            <i class="fa fa-university mt-5 text-theme-color-2"></i>
+                            <h2 data-animation-duration="2000" data-value="10"
+                                class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+                            <h5 class="text-white text-uppercase mb-0">Our Colleges</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 mb-md-0">
+                        <div class="funfact text-center">
+                            <i class="fa fa-bed mt-5 text-theme-color-2"></i>
+                            <h2 data-animation-duration="2000" data-value="720"
+                                class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+                            <h5 class="text-white text-uppercase mb-0">+Beds Hospital</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: COURSES -->
+        <section class="">
+            <div class="container">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4 class="line-bottom mt-20 mb-20 text-theme-colored">All Courses Idea</h4>
+                            <ul id="myTab" class="nav nav-tabs boot-tabs">
+                                <li class="active"><a href="#small" data-toggle="tab">Institutions</a></li>
+                                <li><a href="#medium" data-toggle="tab">Hospitals and Healthcare</a></li>
+                                <li><a href="#large" data-toggle="tab">Important Link</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="small">
+                                    <table id="Coninstitute" class="table table-bordered">
+                                        <tr>
+                                            <td class="text-center font-16 font-weight-600 bg-theme-color-2 text-white"
+                                                colspan="4">Our
+                                                Constituent Institutions
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Institutions</th>
+                                            <th>Link</th>
+                                        </tr>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">Rohilkhand Medical College & Hospital</th>
+                                            <td><a class="text-theme-color-2" href="https://rmcbareilly.com/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Institute of Dental Sciences</th>
+                                            <td><a class="text-theme-color-2" href="http://idsbareilly.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Rohilkhand College of Nursing</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://rmcbareilly.com/rohilkhand-college-of-nursing/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Rohilkhand School of Nursing</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://rmcbareilly.com/rohilkhand-college-of-nursing/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Rohilkhand College of Paramedical Sciences</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.biu.edu.in/rohilkhand-college-of-paramedical-sciences/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">BIU College of Pharmacy</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.biu.edu.in/biu-college-of-pharmacy/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Keshlata College of Pharmacy</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="http://keshlatanursing.com/keshlata-college-of-pharmacy/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">BIU College of Management</th>
+                                            <td><a class="text-theme-color-2" href="#">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">BIU College of Humanities & Journalism</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.biu.edu.in/faculty-of-humanities-journalism/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Rohilkhand Ayurvedic Medical College & Hospital</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.biu.edu.in/rohilkhand-ayurvedic-medical-college-hospital/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="medium">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="text-center font-16 font-weight-600 bg-theme-color-2 text-white"
+                                                colspan="4">Hospitals
+                                                and Healthcare
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hospitals and Healthcare</th>
+                                            <th>Link</th>
+                                        </tr>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">Rohilkhand Medical College & Hospital</th>
+                                            <td><a class="text-theme-color-2" href="https://rmcbareilly.com/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Institute Of Dental Sciences</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.idsbareilly.in/">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Keshlata Hospital Bareilly</th>
+                                            <td><a class="text-theme-color-2" href="http://www.keshlata.com/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="large">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="text-center font-16 font-weight-600 bg-theme-color-2 text-white"
+                                                colspan="4">Important
+                                                Links
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Important Link</th>
+                                            <th>Link</th>
+                                        </tr>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">National Medical Commission (NMC)</th>
+                                            <td><a class="text-theme-color-2" href="https://www.nmc.org.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dental Council of India</th>
+                                            <td><a class="text-theme-color-2" href="https://dciindia.gov.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Indian Nursing Council</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://www.indiannursingcouncil.org/">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Pharmacy Council of India</th>
+                                            <td><a class="text-theme-color-2" href="https://dgpm.nic.in/">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Directorate of Medical Education and Training U.P</th>
+                                            <td><a class="text-theme-color-2" href="http://www.updgme.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">National Eligibility Cum Entrance Test</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://ntaneet.nic.in/Ntaneet/Welcome.aspx">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">U.P. State Medical Faculty</th>
+                                            <td><a class="text-theme-color-2" href="https://www.upsmfac.org/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">University Grants Commission</th>
+                                            <td><a class="text-theme-color-2" href="https://www.ugc.ac.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">DigiLocke - Digital India program</th>
+                                            <td><a class="text-theme-color-2"
+                                                   href="https://digilocker.gov.in/">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">National Academic Depository(NAD)</th>
+                                            <td><a class="text-theme-color-2" href="https://nad.gov.in/">Visit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Free Online Courses By Swayam</th>
+                                            <td><a class="text-theme-color-2" href="https://swayam.gov.in/">Visit</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <h3 class="line-bottom mt-0 line-height-1">Education<span
+                                    class="text-theme-color-2"> Stream</span></h3>
+                            <p class="mb-10">Students seeking a degree can choose from our Programmes like MD/MS, MBBS,
+                                MDS, BDS, M.Sc
+                                Medical, B.Sc Nursing, B. Pharama etc.</p>
+                            <div id="accordion1" class="panel-group accordion">
+                                <div class="panel">
+                                    <div class="panel-title"><a class="active" data-parent="#accordion1"
+                                                                data-toggle="collapse"
+                                                                href="#accordion11" aria-expanded="true"><span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-user-md fa-2x mt-5 text-theme-color-2"></i> Medical
+                                        Sciences</a></div>
+                                    <div id="accordion11" class="panel-collapse collapse in" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Rohilkhand Medical college & Hospital is the constituent college Faculty
+                                                of medicine. In this
+                                                faculty is housed in four storied building with a covered area of above
+                                                4,00,000 sq. feet.<br><a
+                                                        href="stream/medical">More</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion12"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-stethoscope fa-2x mt-5 text-theme-color-2"></i> Dental Sciences</a>
+                                    </div>
+                                    <div id="accordion12" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Institute of Dental Sciences is the constituent college of the faculty of
+                                                Dental Sciences. All
+                                                courses offered in the faculty are recognized from Dental council of
+                                                India.
+                                                The well-structured building provides congenial environment for
+                                                learning. <br><a
+                                                        href="stream/dental">More</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion13"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-user-plus fa-2x mt-5 text-theme-color-2"></i> Nursing</a></div>
+                                    <div id="accordion13" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Rohilkhand College of Nursing is the constituent college of this faculty.
+                                                Under Rohilkhand
+                                                College of Nursing course offered are recognized by Indian Nursing
+                                                Council of India.<br><a
+                                                        href="stream/nursing">More</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion14"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-medkit fa-2x mt-5 text-theme-color-2"></i> Pharmacy</a></div>
+                                    <div id="accordion14" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Pharmacy course prepares professional in the field of health sciences
+                                                focusing on safe and
+                                                effective medication use. They are educated about the actions of drugs,
+                                                drug uses, therapeutic
+                                                roles, side effects, potential drug interactions. <br><a
+                                                        href="stream/pharmacy">More</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion15"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-male fa-2x mt-5 text-theme-color-2"></i> Management</a></div>
+                                    <div id="accordion15" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Management is a very broad term and one who can manage affairs of a
+                                                department or vertical in a
+                                                company or organization or people and their effectivity. <br><a
+                                                        href="stream/management">More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion16"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-video-camera fa-2x mt-5 text-theme-color-2"></i> Humanities &
+                                        Journalism</a></div>
+                                    <div id="accordion16" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>BIU College of Humanities & Journalism is the constituent college of this
+                                                faculty. Under Bareilly
+                                                International University course offered, M.A
+                                                (Eng/Hi/Sociology/Psychology), B.A/M.A (Mass
+                                                Communication), B.A/M.A (Journalism).<br><a
+                                                        href="stream/humanitiesandjournalism">More</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <div class="panel-title"><a data-parent="#accordion1" data-toggle="collapse"
+                                                                href="#accordion17"
+                                                                class="" aria-expanded="true"> <span
+                                            class="open-sub"></span> <i
+                                            class="fa fa-pencil-square-o fa-2x mt-5 text-theme-color-2"></i> Paramedical
+                                        Sciences</a></div>
+                                    <div id="accordion17" class="panel-collapse collapse" role="tablist"
+                                         aria-expanded="true">
+                                        <div class="panel-content">
+                                            <p>Paramedical courses in interdisciplinary medical subjects are becoming
+                                                enormously important in
+                                                health care systems. In the recent years, there has been a growing need
+                                                for qualified & well
+                                                trained paramedical personnel. <br><a href="stream/paramedical">More</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diver: Video Background  -->
+        <section class="divider parallax layer-overlay overlay-theme-colored-2"
+                 data-bg-img="{% static 'photos/home/biubuilding.jpeg' %}" data-parallax-ratio="0.7">
+            <div class="container pt-120 pb-120">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3 class="text-black text-uppercase font-22 font-weight-310 mt-0 mb-25">Watch Our Latest
+                                <span
+                                        class="text-theme-color-2 font-weight-600"> Campus Tour </span></h3>
+                            <a href="https://www.youtube.com/watch?v=UqoeQMSc500" data-lightbox-gallery="youtube-video"><i
+                                    class="fa fa-play-circle text-theme-color-2 font-72"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Map -->
+        <!--  <section id="slider" class="swiper_wrapper clearfix school-slider bg-theme-homesection">
+          <div class="swiper-container swiper-parent">
+            <div class="col-md-12 text-center"><br>
+              <h3 class="text-black text-uppercase font-22 font-weight-310 mt-0 mb-25">Watch Our Latest <span
+                  class="text-theme-color-2 font-weight-600"> Campus Tour </span> On Map</h3>
+            </div>
+            <div class="swiper-wrapper">
+              <iframe width="100%" height="450" class="googlemap" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.co.in/maps?ie=UTF8&amp;cid=5533011640280781548&amp;q=Lovely+Professional+University&amp;gl=IN&amp;hl=en&amp;ll=31.253603,75.703669&amp;spn=0.006295,0.006295&amp;t=m&amp;layer=c&amp;cbll=31.260733,75.70697&amp;panoid=PPeXkt5NPYNTeQijNbwYCg&amp;cbp=12,237.79,,0,-0.42&amp;source=embed&amp;output=svembed"></iframe>
+            </div>
+          </div>
+          <br>
+        </section> -->
+        <!-- Map End -->
+        <!-- Section: Honorable -->
+        <section id="teachers">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-uppercase text-theme-colored title line-bottom line-height-1 mb-0">Our <span
+                                    class="text-theme-color-2 font-weight-400">Honorable</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mtli-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-4col">
+                            <div class="item bg-theme-homesection">
+                                <div class="team-members maxwidth400">
+                                    <div class="team-thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/honorable/drkeshavsmall.jpg' %}" alt=""
+                                             loading="lazy">
+                                    </div>
+                                    <div
+                                            class="team-bottom-part border-bottom-theme-color-2-2px bg-lighter border-1px text-center p-10 pt-20 pb-10">
+                                        <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
+                                                class="text-theme-color-2"
+                                                href="#">Dr. Keshav Agarwal</a></h4>
+                                        <h5 class="text-theme-color">Chancellor</h5>
+                                        <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item bg-theme-homesection">
+                                <div class="team-members maxwidth400">
+                                    <div class="team-thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/honorable/drlatasmall.jpg' %}" alt=""
+                                             loading="lazy">
+                                    </div>
+                                    <div
+                                            class="team-bottom-part border-bottom-theme-color-2-2px bg-lighter border-1px text-center p-10 pt-20 pb-10">
+                                        <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
+                                                class="text-theme-color-2"
+                                                href="#">Dr. Lata Agarwal</a></h4>
+                                        <h5 class="text-theme-colored">Vice Chancellor</h5>
+                                        <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item bg-theme-homesection">
+                                <div class="team-members maxwidth400">
+                                    <div class="team-thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/honorable/ashoksmall.jpg' %}" alt=""
+                                             loading="lazy">
+                                    </div>
+                                    <div
+                                            class="team-bottom-part border-bottom-theme-color-2-2px bg-lighter border-1px text-center p-10 pt-20 pb-10">
+                                        <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
+                                                class="text-theme-color-2"
+                                                href="#">Dr. Ashok Agarwal</a></h4>
+                                        <h5 class="text-theme-colored">President</h5>
+                                        <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item bg-theme-homesection">
+                                <div class="team-members maxwidth400">
+                                    <div class="team-thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/honorable/kiransmall.jpg' %}" alt=""
+                                             loading="lazy">
+                                    </div>
+                                    <div
+                                            class="team-bottom-part border-bottom-theme-color-2-2px bg-lighter border-1px text-center p-10 pt-20 pb-10">
+                                        <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
+                                                class="text-theme-color-2"
+                                                href="#">Dr. Kiran Agarwal</a></h4>
+                                        <h5 class="text-theme-colored">Vice President</h5>
+                                        <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Again -->
+        <section class="bg-theme-homesection">
+            <div class="container-fluid pb-0">
+                <div class="row">
+                    <div style="text-align: center;">
+                        <p>Some Amazing Stuff From Our Campus <span
+                                style="font-size: 20px; color:#ef4c68">Our Gallery</span></p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="portfolio-filter text-center">
+                            <a href="#convocation" class="active" class="" data-filter=".convocation">Convocation</a>
+                            <a href="#campus" onclick="myFunction()" class="" data-filter=".campus">Campus</a>
+                            <a href="#meeting" class="" onclick="myFunction()" data-filter=".meeting">Meetings of
+                                Dr.Keshav Kumar
+                                Agrawal</a>
+                            <a href="#event" class="" onclick="myFunction()" data-filter=".event">Events</a>
+                            <a href="#hospital" class="" onclick="myFunction()" data-filter=".hospital">Hospital</a>
+                        </div>
+                        <!-- End Works Filter -->
+                        <!-- Portfolio Gallery Grid -->
+                        <div id="grid" class="gallery-isotope grid-4 gutter masonry clearfix">
+                            <div>
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/1/con_1.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <!--<a href="#"><i class="fa fa-link"></i></a>
+                                                    <a href="#"><i class="fa fa-heart-o"></i></a>-->
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/1/con_1.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<a class="hover-link" data-lightbox="image"
+                    href="{% static 'photos/home/gallery/portfolio/w1.jpg' %}">View
+                    more</a>---->
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/1/con_2.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/1/con_2.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/1/con_3.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/1/con_3.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item Start -->
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/2/con2_1.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/2/con2_1.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/2/con2_2.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/2/con2_2.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/2/con2_4.JPG' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <!--<a class="popup-vimeo" href="https://youtu.be/UqoeQMSc500"><i class="fa fa-play"></i></a>-->
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/2/con2_4.JPG' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/3/16-min.jpg' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <!--<a class="popup-vimeo" href="https://youtu.be/UqoeQMSc500"><i class="fa fa-play"></i></a>-->
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/3/16-min.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item convocation">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/convocation/3/DSC_9111-min.jpg' %}"
+                                             alt="project" loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/convocation/3/DSC_9111-min.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                            </div>
+                            <div id="hide" style="display:none">
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k1.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k1.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k2.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k4.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k4.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="hover-link" data-lightbox="image"
+                                           href="{% static 'photos/home/gallery/drKeshav/k4.jpg' %}">View
+                                            more</a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k3.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k8.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k8.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k9.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k9.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k11.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k11.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <div class="gallery-item meeting">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/drKeshav/k12.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/drKeshav/k12.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp1.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp4.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/campus_1.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp9.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp10.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp11.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp12.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item campus">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/cumpus/camp16.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_1.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_2.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <!-- <a href="#"><i class="fa fa-link"></i></a>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<a class="hover-link" data-lightbox="image"
+                    href="{% static 'photos/home/gallery/event/e_2.JPG' %}">View
+                    more</a>-->
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_3.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_4.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_5.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_6.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_7.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item event">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/event/e_8.JPG' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h1.jpeg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h1.jpeg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h2.jpeg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h2.jpeg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h3.jpeg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h3.jpeg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h4.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h4.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital wide">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h5.jpeg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h5.jpeg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <!-- Portfolio Item Start -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h1-400x300.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h1-400x300.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Item End -->
+                                <div class="gallery-item hospital">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth"
+                                             src="{% static 'photos/home/gallery/hospital/h2-400x300.jpg' %}" alt=""
+                                             loading="lazy">
+                                        <div class="overlay-shade"></div>
+                                        <div class="icons-holder">
+                                            <div class="icons-holder-inner">
+                                                <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
+                                                    <a data-lightbox="image"
+                                                       href="{% static 'photos/home/gallery/hospital/h2-400x300.jpg' %}"><i
+                                                            class="fa fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ad More Here -->
+                            </div>
+                        </div>
+                        <!-- End Portfolio Gallery Grid -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Gallery End-->
+        <!-- Section: Contact -->
+        <section id="contact" class="divider layer-overlay overlay-theme-colored-8"
+                 data-bg-img="{% static 'photos/home/bg7.jpg' %}">
+            <div class="container pb-0">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-4" data-wow-duration="1.4s">
+                            <img src="{% static 'photos/home/dc2.png' %}" alt="" loading="lazy">
+                        </div>
+                        <div class="col-md-8 wow fadeInRight mt-10" data-wow-duration="1.4s">
+                            <h3 class="title line-bottom line-height-1 text-white mt-0 mb-30">Make An <span
+                                    class="text-theme-color-2">Admission Now!</span></h3>
+                            <!-- Contact Form -->
+                            <form id="addmisiion-form" name="addmisiion_form" class=""
+                                  action="addmissionform" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group mb-20">
+                                            <input name="form_name" class="form-control" type="text"
+                                                   placeholder="Enter Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group mb-20">
+                                            <input name="form_email" class="form-control required email" type="email"
+                                                   placeholder="Enter Email" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group mb-20">
+                                            <div class="styled-select">
+                                                <!--<select id="person_select" name="person_select" class="form-control" required="">
+                                                  <option value="">Choose Subject</option>
+                                                  <option value="1 Person">MBBS</option>
+                                                  <option value="2 Person">MD/MD</option>
+                                                  <option value="3 Person">BDS</option>
+                                                  <option value="Family Pack">MDS</option>
+                                                </select>-->
+                                                <input name="form_course" class="form-control" type="text"
+                                                       placeholder="Course Name"
+                                                       required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group mb-30">
+                                            <!--<input name="reservation_date" class="form-control required date-picker" type="text"
+                                              placeholder="Reservation Date" aria-required="true">-->
+                                            <input name="form_mobile" class="form-control" type="text"
+                                                   placeholder="Enter Mobile" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-20">
+                <textarea name="form_message" class="form-control required" rows="5"
+                          placeholder="Enter Message" required=""></textarea>
+                                </div>
+                                <div class="form-group">
+                                   <!-- <input name="form_send" class="form-control" type="hidden" value=""/>-->
+                                    <button type="submit" class="btn btn-flat text-uppercase mt-0 mb-sm-30"
+                                            data-loading-text="Please wait...">Send your message
+                                    </button>
+                                    <button type="reset" class="btn btn-flat text-uppercase mt-0 mb-sm-30">Reset
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- Contact Form Validation-->
+                            <script type="text/javascript">
+                                $("#contact_form").validate({
+                                    submitHandler: function (form) {
+                                        var form_btn = $(form).find('button[type="submit"]');
+                                        var form_result_div = '#form-result';
+                                        $(form_result_div).remove();
+                                        form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                        var form_btn_old_msg = form_btn.html();
+                                        form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                                        $(form).ajaxSubmit({
+                                            dataType: 'json',
+                                            success: function (data) {
+                                                if (data.status == 'true') {
+                                                    $(form).find('.form-control').val('');
+                                                }
+                                                form_btn.prop('disabled', false).html(form_btn_old_msg);
+                                                $(form_result_div).html(data.message).fadeIn('slow');
+                                                setTimeout(function () {
+                                                    $(form_result_div).fadeOut('slow')
+                                                }, 6000);
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Divider: Clients -->
+        <section class="clients bg-theme-color-buttonlogo">
+            <div class="container pt-10 pb-0">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Section: Clients -->
+                        <div class="owl-carousel-6col clients-logo transparent text-center owl-nav-top">
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/ugc.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/mci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/dci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/iin.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/pci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/mhfw.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/mci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/dci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/iin.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                            <div class="item"><a href="#"><img src="{% static 'photos/home/recog/pci.png' %}" alt=""
+                                                               loading="lazy"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end main-content -->
+    </div>
+    </div>
+    <!--Gallery  -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("hide");
+            if (x.style.display === "block") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <!--Cascading DropDown Slection-->
+    <script>
+        var subjectObject = {
+            "Medical Sciences": {
+                "Bachelors": ["MBBS"],
+                "Masters": ["MD (Anatomy)", "MD (Anaesthesiology)", "MD (Biochemistry)", "MD (Respiratory Medicine)", "MD (Community Medicine)", "MD (Dermatology)", "MD (General Medicine)", "MD (Microbiology)", "MD (Paediatrics)", "MD (Pharmacology)", "MD (Physiology)", "MD (Psychiatry)", "MD (Radiodiagnosis)", "MS (E.N.T.)", "MS (General Surgery)", "MS (Obst. & Gynaeco)", "MS (Ophthalmology)", "MS (Orthopaedics)", "M.Sc. Anatomy", "M.Sc. Physiology", "M.Sc. Biochemistry", "M.Sc. Pharmacology", "M.Sc. Microbiology"],
+                "Doctoral(Ph.D)": ["Medical Sciences (Specializations)"],
+            },
+            "Dental Sciences": {
+                "Bachelors": ["BDS"],
+                "Masters": ["MDS (Conservative Dentistry & Endodontics)", "MDS (Oral & Maxillofacial Surgery", "MDS (Orthodontics)", "MDS (Periodontics)", "MDS (Prosthodontics and Crown & Bridge)", "MDS (Oral Medicine and Radiology)", "MDS (Paediatric & Preventive Dentistry", "MDS (Public Health Dentistry)", "MDS (Oral Pathology & Microbiology)"],
+                "Doctoral(Ph.D)": ["Dental Sciences (Specializations)"],
+                "Diplomas(Others)": ["Diploma in Dental Hygienist", "Diploma- Dental Mechanics"]
+            },
+            "Nursing": {
+                "Bachelors": ["B Sc Nursing"],
+                "Masters": ["M Sc Nursing", "NPCC"],
+                "Doctoral(Ph.D)": ["Nursing Sciences (Specializations)"],
+                "Diplomas(Others)": ["G N M", "A N M"]
+            },
+            "Pharmacy": {
+                "Bachelors": ["B Pharma"],
+
+                "Doctoral(Ph.D)": ["Pharmacy Sciences (Specializations)"],
+                "Diplomas(Others)": ["D Pharma"]
+            },
+            "Management": {
+                "Bachelors": ["B.Sc (Computer Science)", "B.Com (Hons)", "BBA (Finance & Taxation)"],
+                "Masters": ["Masters Hospital Administration", "Master in Public Health", "M Com"],
+
+            },
+            "Humanities & Journalism": {
+                "Bachelors": ["BA Journalism", "BA Mass Communication"],
+                "Masters": ["MA Journalism", "MA Mass Communication", "MA Psychology", "MA Sociology", "MA English", "MA Hindi"],
+
+            },
+            "Paramedical Sciences": {
+                "Bachelors": ["B P T", "B Sc MLT", "B Sc.(Optometry)", "B Sc (Forensic Sciences)"],
+                "Masters": ["Diplomas Paramedical Science", "Diploma in MLT", "Diploma in X-Ray Technician", "Diploma in Emergency& Trauma Care", "Diploma in Sanitation", "Diploma in Dialysis Technician", "Diploma in Radio Imaging Technology", "Diploma in MRI Technician"],
+                "Doctoral(Ph.D)": ["Paramedical Sciences (Specializations)"],
+            }
+        }
+        window.onload = function () {
+            var stream = document.getElementById("stream"),
+                graduate = document.getElementById("graduate"),
+                course = document.getElementById("course");
+            for (var state in subjectObject) {
+                stream.options[stream.options.length] = new Option(state, state);
+            }
+            stream.onchange = function () {
+                graduate.length = 1; // remove all options bar first
+                course.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+                for (var county in subjectObject[this.value]) {
+                    graduate.options[graduate.options.length] = new Option(county, county);
+                }
+            }
+            stream.onchange(); // reset in case page is reloaded
+            graduate.onchange = function () {
+                course.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+                var cities = subjectObject[stream.value][this.value];
+                for (var i = 0; i < cities.length; i++) {
+                    course.options[course.options.length] = new Option(cities[i], cities[i]);
+                }
+            }
+        }
+    </script>
+    <!--Find Drop Down Slected Value-->
+    <script>
+        function findFunction() {
+            var x = document.getElementById("course").selectedIndex;
+            var y = document.getElementById("course").options;
+            var result = document.getElementById("get_course").innerHTML = y[x].text;
+            var courses = 'courses/'
+            window.location = courses + result.toLowerCase().split(" ").join("");
+        }
+    </script>
+{% endblock %}
